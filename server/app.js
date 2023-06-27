@@ -12,23 +12,24 @@ const Controller = require('./controller');
 const app = new Koa();
 const router = new Router();
 const controller = new Controller();
-app.use(compress())
+// app.use(compress())
 app.use(bodyParser());
 app.use(serve(path.join(__dirname + "/../client")));
 /**
  * koa sse middleware
- * @param {Object} opts 
+ * @param {Object} opt
  * @param {Number} opts.maxClients max client number, default is 10000
  * @param {Number} opts.pingInterval heartbeat sending interval time(ms), default 60s
  * @param {String} opts.closeEvent if not provide end([data]), send default close event to client, default event name is "close"
  * @param {String} opts.matchQuery when set matchQuery, only has query (whatever the value) , sse will create
  */
-app.use(sse({
-    maxClients: 5000,
-    pingInterval: 30000
-}));
-
-router.get('/event', koasse(),controller.getEventSourceData);
+const SSE_CONF = {
+    maxClients: 2, // 最大连接数
+    pingInterval: 3000 // 重连时间
+}
+router.get('/event/push', koasse(SSE_CONF), controller.eventPush);
+router.post('/event/progress', controller.eventProgress);
+router.get('/event/remove', controller.eventRemove);
 
 app
     .use(router.routes())
