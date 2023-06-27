@@ -14,3 +14,8 @@
 ### 运行
 
 + npm run start
++ http://127.0.0.1:3000/html/index.html
+
+### 如下所示
+
+![示例](./static/iShot_2023-06-27_19.17.09.png)
