@@ -1,5 +1,5 @@
 {
-  "name": "eventsourcedemo",
+  "name": "sse",
   "version": "1.0.0",
   "description": "> EventSource 接口是 web 内容与服务器发送事件通信的接口。",
   "main": "index.js",

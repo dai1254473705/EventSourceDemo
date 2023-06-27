@@ -37,6 +37,6 @@ app
 
 app.listen(3000, () => {
     console.log(`
-    当前项目运行地址：http://127.0.0.1:3000/
+    当前项目运行地址：http://127.0.0.1:3000/html/index.html
     `);
 });

@@ -10,5 +10,8 @@
 |MDN|https://developer.mozilla.org/zh-CN/docs/Web/API/EventSource|
 |使用服务器发送事件|https://developer.mozilla.org/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events|
 |koa|https://koa.bootcss.com/#request|
-https://www.lmlphp.com/user/151837/article/item/3652497/
 
+### 运行
+
++ npm run start
++ 
