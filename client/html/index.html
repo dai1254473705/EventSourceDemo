@@ -6,31 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventSource</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <style>
-        button {
-            cursor: pointer;
-        }
-
-        #msg {
-            height: 300px;
-            padding: 10px;
-            border: 1px solid red;
-        }
-
-        .btn {
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- <div id="msg">还未发送任何请求</div>
-    <div class="btn">
-        <button id="webSS">链接WebSocket</button>
-        <button id="webST">关闭WebSocket</button>
-        <button id="sse">使用SSE</button>
-    </div> -->
-    <ul></ul>
     <button id="sse">使用SSE</button>
     <div>
         进度：<span class="progress">0</span>%
